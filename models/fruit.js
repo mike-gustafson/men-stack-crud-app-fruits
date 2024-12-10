@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
 const fruitSchema = new mongoose.Schema({
-    name: String,
-    isReadyToEat: Boolean
+    name: {type: String, required: true},
+    isReadyToEat: Boolean,
+    price: {type: mongoose.Schema.Types.Decimal128, min: 0},
 });
 
 const Fruit = mongoose.model('Fruit', fruitSchema);

@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create a Fruit</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head><!-- views/fruits/new.ejs -->
 
   <body>
@@ -13,10 +14,11 @@
     <form action="/fruits" method="POST">
       <label for="name">Name:</label>
       <input type="text" name="name" id="name" />
-  
+        <label for="price">Price:</label>
+        <input type="number" name="price" id="price" />
       <label for="isReadyToEat">Ready to Eat?</label>
       <input type="checkbox" name="isReadyToEat" id="isReadyToEat" />
-  
+      
       <button type="submit">Add Fruit</button>
     </form>
     <a href="/fruits/">Back to Fruits</a>
